@@ -40,7 +40,7 @@ let args =  messageArray.slice(1);
   .setThumbnail(bicon)
   .addField("Attendance", "Present")
   .setTimestamp()
-  .setFooter("UNION AK Attendance",bicon2);
+  .setFooter("UNION GC Attendance",bicon2);
   
   let attendancechannel = message.guild.channels.find(`name`, "gc-attendance");
   if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
