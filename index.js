@@ -6,7 +6,7 @@ let cdseconds = 86400;
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity("%present for Attendance", {type: "WATCHING"});
+  bot.user.setActivity("#present for Attendance", {type: "WATCHING"});
   
 });
 
@@ -22,7 +22,7 @@ let cmd = messageArray[0];
 let args =  messageArray.slice(1);
     
  if(cmd === `${prefix}present`){
-    let akmemberRole = message.guild.roles.find("name", "GC - Member");
+    let akmemberRole = message.guild.roles.find("name", "RO - Member");
    if(message.member.roles.has(akmemberRole.id)) {
    if(cooldown.has(message.author.id)){
     message.delete();
@@ -41,16 +41,16 @@ let args =  messageArray.slice(1);
   .setThumbnail(bicon)
   .addField("Attendance", "Present")
   .setTimestamp()
-  .setFooter("UNION GC Attendance",bicon2);
+  .setFooter("UNION RO Attendance",bicon2);
   
-  let attendancechannel = message.guild.channels.find(`name`, "gc-attendance");
+  let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
   if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
   
   
   message.delete().catch(O_o=>{});
   attendancechannel.send(attendanceEmbed);
       } else {
-     message.reply("바보야, you don't have the permission to use this command.");
+     message.reply("you don't have the permission to use this command.");
    }
    setTimeout(() => {
       cooldown.delete(message.author.id)
