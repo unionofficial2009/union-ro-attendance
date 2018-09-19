@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Lonz",
+  "author": "joeYap",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
