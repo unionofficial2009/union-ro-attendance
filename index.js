@@ -37,6 +37,8 @@ let args =  messageArray.slice(1);
   let attendanceEmbed = new Discord.RichEmbed()
   .setDescription(`${message.author}`)
   .addField("Username", `${message.author.username}`)
+  .addField("Tag", `${message.author.tag}`)
+  .addField("ID", `${message.author.id}`)
   .setColor("#15f153")
   .setThumbnail(bicon)
   .addField("Attendance", "Present")
@@ -50,7 +52,7 @@ let args =  messageArray.slice(1);
   message.delete().catch(O_o=>{});
   attendancechannel.send(attendanceEmbed);
       } else {
-     message.reply("you don't have the permission to use this command.");
+     message.reply("You don't have the permission to use this command.");
    }
    setTimeout(() => {
       cooldown.delete(message.author.id)
