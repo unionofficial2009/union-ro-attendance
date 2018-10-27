@@ -72,7 +72,7 @@ let args =  messageArray.slice(1);
       .then(messages => {
       
        
-      message.reply(`${messages.filter(m => m.member.roles.has(`489776631913906199`)).size} RO Members`);
+      message.reply(`**${messages.filter(m => m.member.roles.has(`489776631913906199`)).size}** RO Members`);
         
       }).catch(console.error);
       
