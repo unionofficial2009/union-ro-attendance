@@ -62,7 +62,7 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}membercount`){
-    let romemberRole = message.guild.roles.find("name", "ro-attendance");
+    let romemberRole = message.guild.roles.find("name", "RO - Member");
     if(message.member.roles.has(romemberRole.id)) {
       let ignchannel = message.guild.channels.find(`name`, "ro-members-ign");
       
