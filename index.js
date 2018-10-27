@@ -62,12 +62,12 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}membercount`){
-    let romemberRole = message.guild.roles.find("name", "ro-members-ign");
+    let romemberRole = message.guild.roles.find("name", "ro-attendance");
     if(message.member.roles.has(romemberRole.id)) {
-      let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
+      let ignchannel = message.guild.channels.find(`name`, "ro-members-ign");
       
       ignchannel.fetchMessages()
-      .then(messages => message.reply(`Received ${messages.size} messages`))
+      .then(messages => message.reply(`${messages.size} RO Members`))
       .catch(console.error);
       
     } else {
