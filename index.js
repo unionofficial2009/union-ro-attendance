@@ -61,6 +61,21 @@ let args =  messageArray.slice(1);
     
   }
   
+  if(cmd === `${prefix}membercount`){
+    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    if(message.member.roles.has(romemberRole.id)) {
+      let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
+      
+      ignchannel.fetchMessages()
+      .then(messages => message.reply(`Received ${messages.size} messages`))
+      .catch(console.error);
+      
+    } else {
+     message.reply("You don't have the permission to use this command.");
+   }
+    
+  }  
+  
   if(cmd === `${prefix}botinfo`){
    
   let bicon = bot.user.displayAvatarURL;
