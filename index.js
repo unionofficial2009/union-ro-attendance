@@ -73,7 +73,7 @@ let args =  messageArray.slice(1);
       
        
       message.reply(`**${messages.size}** RO Members`);
-        
+      message.delete().catch(O_o=>{});  
       }).catch(console.error);
       
     } else {
