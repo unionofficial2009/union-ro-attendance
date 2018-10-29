@@ -75,7 +75,7 @@ let args =  messageArray.slice(1);
       //message.reply(`**${messages.size}** RO Members`);
       //message.delete().catch(O_o=>{});  
       //}).catch(console.error);
-      let guildmembers = message.members.size;
+      let guildmembers = message.guild.members.size;
       
       //let mcount = guildmembers.filter(m => m.roles == "RO Members").size;
       
