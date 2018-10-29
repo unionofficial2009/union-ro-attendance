@@ -104,7 +104,7 @@ let args =  messageArray.slice(1);
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "";
+      let mlist = "**RO Members List**\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
@@ -112,7 +112,7 @@ let args =  messageArray.slice(1);
         
       if(mcount > 0){
          mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. ${guildMember.username}\n`
+         mlist = mlist + `${mmcount}. ${guildMember.user.username}\n`
         
         
       }  
