@@ -61,7 +61,7 @@ let args =  messageArray.slice(1);
     
   }
   
-  if(cmd === `${prefix}membercount`){
+  if(cmd === `${prefix}mcount`){
     let romemberRole = message.guild.roles.find("name", "RO - Member");
     if(message.member.roles.has(romemberRole.id)) {
       
