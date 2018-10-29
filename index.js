@@ -96,6 +96,40 @@ let args =  messageArray.slice(1);
     
   }  
   
+  if(cmd === `${prefix}mlist`){
+    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    if(message.member.roles.has(romemberRole.id)) {
+      
+      
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "";
+      
+      guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size; 
+        
+      if(mcount > 0){
+         mmcount = mmcount + 1;  
+         mlist = mlist + `${mmcount}. ${guildMember.username}\n`
+        
+        
+      }  
+      
+         
+      
+      })
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+      
+    } else {
+     message.reply("You don't have the permission to use this command.");
+   }
+    
+  }
+  
   if(cmd === `${prefix}botinfo`){
    
   let bicon = bot.user.displayAvatarURL;
