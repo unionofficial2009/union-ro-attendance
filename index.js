@@ -77,9 +77,17 @@ let args =  messageArray.slice(1);
       //}).catch(console.error);
       let guildmembers = message.guild.members;
       
-      let mcount = guildmembers.filter(m => m.roles.name == "RO - Members").size;
+      let mmcount = 0;
       
-      message.reply(`**${mcount}** RO Members`);
+      guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "RO - Members").size;  
+      
+      mmcount = mmcount + mcount;   
+      
+      })
+      
+      message.reply(`**${mmcount}** RO Members`);
       
       
     } else {
