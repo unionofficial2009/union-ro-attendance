@@ -75,11 +75,11 @@ let args =  messageArray.slice(1);
       //message.reply(`**${messages.size}** RO Members`);
       //message.delete().catch(O_o=>{});  
       //}).catch(console.error);
-      let guildmembers = message.members;
+      let guildmembers = message.members.size;
       
-      let mcount = guildmembers.filter(m => m.roles == "RO Members").size;
+      //let mcount = guildmembers.filter(m => m.roles == "RO Members").size;
       
-      message.reply(`**${mcount}** RO Members`);
+      message.reply(`**${guildmembers}** RO Members`);
       
       
     } else {
