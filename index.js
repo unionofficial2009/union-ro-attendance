@@ -65,16 +65,19 @@ let args =  messageArray.slice(1);
     let romemberRole = message.guild.roles.find("name", "RO - Member");
     if(message.member.roles.has(romemberRole.id)) {
       
-      let ignchannel = message.guild.channels.find(`name`, "ro-members-ign");
-      if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
+      //let ignchannel = message.guild.channels.find(`name`, "ro-members-ign");
+      //if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
       
-      ignchannel.fetchMessages()
-      .then(messages => {
+      //ignchannel.fetchMessages()
+      //.then(messages => {
       
        
-      message.reply(`**${messages.size}** RO Members`);
-      message.delete().catch(O_o=>{});  
-      }).catch(console.error);
+      //message.reply(`**${messages.size}** RO Members`);
+      //message.delete().catch(O_o=>{});  
+      //}).catch(console.error);
+      let guildmembers = message.members;
+      message.reply(`**${guildmembers.roles.find("name", "RO - Member").size}** RO Members`);
+      
       
     } else {
      message.reply("You don't have the permission to use this command.");
