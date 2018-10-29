@@ -79,7 +79,7 @@ let args =  messageArray.slice(1);
       
       let mcount = guildmembers.filter(m => m.roles == "RO Members").size;
       
-      message.reply(`**${guildmembers}** RO Members`);
+      message.reply(`**${mcount}** RO Members`);
       
       
     } else {
