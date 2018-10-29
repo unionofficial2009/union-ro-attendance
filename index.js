@@ -88,7 +88,7 @@ let args =  messageArray.slice(1);
       })
       
       message.reply(`**${mmcount}** RO Members`);
-      
+      message.delete().catch(O_o=>{});  
       
     } else {
      message.reply("You don't have the permission to use this command.");
