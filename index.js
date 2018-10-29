@@ -81,7 +81,7 @@ let args =  messageArray.slice(1);
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
-      let mcount = guildMember.roles.filter(r => r.name == "RO - Members").size;  
+      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size;  
       
       mmcount = mmcount + mcount;   
       
