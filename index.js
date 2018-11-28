@@ -21,7 +21,7 @@ bot.on("message", async message => {
  }
   
   
-if(message.author.bot) return;
+//if(message.author.bot) return;
 if(message.channel.type === "dm") return;
   
 let prefix = botconfig.prefix;
@@ -185,8 +185,8 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}g2`){
-    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
-    if(message.member.roles.has(romemberRole.id)) {
+    //let romemberRole = message.guild.roles.find("name", "Attendance Bots");
+    //if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
@@ -219,9 +219,9 @@ let args =  messageArray.slice(1);
       message.reply(`${mlist}`);
       message.delete().catch(O_o=>{});  
       
-    } else {
+    //} else {
      message.reply("You don't have the permission to use this command.");
-   }
+   //}
     
   }
   
