@@ -291,7 +291,8 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
-       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n\n📢 Please select your playing time here :arrow_right: <#517167677266198542>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
