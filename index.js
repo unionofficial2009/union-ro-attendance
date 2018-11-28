@@ -168,7 +168,7 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\nPlease PM them if you need assistant in: /n/n:pushpin:Guild Dojo Challenge/nGuild Quest/n/n<@&489776631913906199>"
+      mlist = mlist + "\nPlease PM them if you need assistant in: \n\n:pushpin:Guild Dojo Challenge\nGuild Quest\n\n<@&489776631913906199>"
       
       message.reply(`${mlist}`);
       message.delete().catch(O_o=>{});  
