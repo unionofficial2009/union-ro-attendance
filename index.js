@@ -220,7 +220,7 @@ let args =  messageArray.slice(1);
       message.delete().catch(O_o=>{});  
       
     //} else {
-     message.reply("You don't have the permission to use this command.");
+    // message.reply("You don't have the permission to use this command.");
    //}
     
   }
