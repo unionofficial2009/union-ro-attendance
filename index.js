@@ -264,7 +264,7 @@ let args =  messageArray.slice(1);
   }
   
    if(cmd === `${prefix}g4`){
-    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
     if(message.member.roles.has(romemberRole.id)) {
       
       
