@@ -183,6 +183,46 @@ let args =  messageArray.slice(1);
     
   }
   
+  if(cmd === `${prefix}g2`){
+    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    if(message.member.roles.has(romemberRole.id)) {
+      
+      
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "**Active Guild Members - 12PM to 6PM**\n";
+      
+      guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "G2 12PM-6PM").size; 
+        
+      if(mcount > 0){
+         mmcount = mmcount + 1;  
+         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>\n`
+        
+        
+      }  
+      
+         
+      
+      })
+      
+      mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
+      mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
+      mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
+       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n\n<@&489776631913906199>";
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+      
+    } else {
+     message.reply("You don't have the permission to use this command.");
+   }
+    
+  }
+  
   
   
   if(cmd === `${prefix}botinfo`){
