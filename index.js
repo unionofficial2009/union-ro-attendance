@@ -144,8 +144,8 @@ let args =  messageArray.slice(1);
   
   
    if(cmd === `${prefix}g1`){
-    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
-    if(message.member.roles.has(romemberRole.id)) {
+    //let romemberRole = message.guild.roles.find("name", "Attendance Bots");
+    //if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
@@ -178,9 +178,9 @@ let args =  messageArray.slice(1);
       message.reply(`${mlist}`);
       message.delete().catch(O_o=>{});  
       
-    } else {
-     message.reply("You don't have the permission to use this command.");
-   }
+    //} else {
+    //  message.reply("You don't have the permission to use this command.");
+    //}
     
   }
   
@@ -226,8 +226,8 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}g3`){
-    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
-    if(message.member.roles.has(romemberRole.id)) {
+    //let romemberRole = message.guild.roles.find("name", "Attendance Bots");
+    //if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
@@ -260,15 +260,15 @@ let args =  messageArray.slice(1);
       message.reply(`${mlist}`);
       message.delete().catch(O_o=>{});  
       
-    } else {
-     message.reply("You don't have the permission to use this command.");
-   }
+    //} else {
+   //  message.reply("You don't have the permission to use this command.");
+   //}
     
   }
   
    if(cmd === `${prefix}g4`){
-    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
-    if(message.member.roles.has(romemberRole.id)) {
+    //let romemberRole = message.guild.roles.find("name", "Attendance Bots");
+    //if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
@@ -301,9 +301,9 @@ let args =  messageArray.slice(1);
       message.reply(`${mlist}`);
       message.delete().catch(O_o=>{});  
       
-    } else {
-     message.reply("You don't have the permission to use this command.");
-   }
+    //} else {
+    // message.reply("You don't have the permission to use this command.");
+   //}
     
   }
   
