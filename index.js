@@ -271,7 +271,7 @@ let args =  messageArray.slice(1);
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Active Guild Members - 12AM to 6AM**\n";
+      let mlist = "**Active Guild Members - 12AM to 6AM**\n\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
