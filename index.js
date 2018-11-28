@@ -144,14 +144,14 @@ let args =  messageArray.slice(1);
   
   
    if(cmd === `${prefix}g1`){
-    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
     if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Active Guild Members - 6AM to 12PM**\n";
+      let mlist = "**Active Guild Members - 6AM to 12PM**\n\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
@@ -168,10 +168,11 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
+      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
-       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -184,14 +185,14 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}g2`){
-    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
     if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Active Guild Members - 12PM to 6PM**\n";
+      let mlist = "**Active Guild Members - 12PM to 6PM**\n\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
@@ -208,10 +209,11 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
+      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
-       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -224,14 +226,14 @@ let args =  messageArray.slice(1);
   }
   
   if(cmd === `${prefix}g3`){
-    let romemberRole = message.guild.roles.find("name", "RO - Member");
+    let romemberRole = message.guild.roles.find("name", "Attendance Bots");
     if(message.member.roles.has(romemberRole.id)) {
       
       
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Active Guild Members - 6PM to 12AM**\n";
+      let mlist = "**Active Guild Members - 6PM to 12AM**\n\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
@@ -248,10 +250,11 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
+      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
-       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
