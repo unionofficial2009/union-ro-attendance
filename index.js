@@ -170,8 +170,8 @@ let args =  messageArray.slice(1);
       
       mlist = mlist + "\nPlease PM them if you need assistant in:\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
-      mlist = mlist + ":pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
-       mlist = mlist + ":pushpin:Endless Tower\n:pushpin:Training Ground";
+      mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
+       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
