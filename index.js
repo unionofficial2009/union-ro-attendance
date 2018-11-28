@@ -106,7 +106,9 @@ let args =  messageArray.slice(1);
     
   }  
   
-  if(cmd === `${prefix}mlist`){
+  
+  
+    if(cmd === `${prefix}mpending`){
     let romemberRole = message.guild.roles.find("name", "RO - Member");
     if(message.member.roles.has(romemberRole.id)) {
       
@@ -114,11 +116,11 @@ let args =  messageArray.slice(1);
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**RO Members List**\n";
+      let mlist = "**RO Pending List**\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
-      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size; 
+      let mcount = guildMember.roles.filter(r => r.name == "RO - Pending").size; 
         
       if(mcount > 0){
          mmcount = mmcount + 1;  
@@ -140,7 +142,8 @@ let args =  messageArray.slice(1);
     
   }
   
-    if(cmd === `${prefix}mpending`){
+  
+   if(cmd === `${prefix}g1`){
     let romemberRole = message.guild.roles.find("name", "RO - Member");
     if(message.member.roles.has(romemberRole.id)) {
       
@@ -148,11 +151,11 @@ let args =  messageArray.slice(1);
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**RO Pending List**\n";
+      let mlist = "**Active Guild Members - 6AM to 12PM**\n";
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
-      let mcount = guildMember.roles.filter(r => r.name == "RO - Pending").size; 
+      let mcount = guildMember.roles.filter(r => r.name == "G1 6AM-12PM").size; 
         
       if(mcount > 0){
          mmcount = mmcount + 1;  
