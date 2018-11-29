@@ -240,8 +240,8 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G3 6PM-12AM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>\n`
+         //mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `
         
         
       }  
