@@ -158,18 +158,9 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G1 6AM-12PM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;
-        
-        if(mcount === mmcount){
-          mlist = mlist + `<@${guildMember.user.id}> `;
-        } else {
-          mlist = mlist + `<@${guildMember.user.id}>, `;  
-        }   
-        
-      }  
-      
-         
-      
+         //mmcount = mmcount + 1;     
+          mlist = mlist + `<@${guildMember.user.id}>, `;       
+      }                     
       })
       
       mlist = mlist + "\n\n**Please PM them if you need assistant in:**\n\n";
@@ -203,7 +194,7 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G2 12PM-6PM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;  
+         //mmcount = mmcount + 1;  
          mlist = mlist + `${mmcount}. <@${guildMember.user.id}>, `;
         
         
@@ -244,7 +235,7 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G3 6PM-12AM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;  
+         //mmcount = mmcount + 1;  
          mlist = mlist + `<@${guildMember.user.id}>, `;
         
         
@@ -285,7 +276,7 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G4 12AM-6AM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;  
+         //mmcount = mmcount + 1;  
          mlist = mlist + `<@${guildMember.user.id}>, `;
         
         
