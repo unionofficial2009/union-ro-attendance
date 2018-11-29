@@ -195,7 +195,7 @@ let args =  messageArray.slice(1);
         
       if(mcount > 0){
          //mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>, `;
+         mlist = mlist + `<@${guildMember.user.id}>, `;
         
         
       }  
