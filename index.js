@@ -158,9 +158,13 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G1 6AM-12PM").size; 
         
       if(mcount > 0){
-         mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>\n`
+         mmcount = mmcount + 1;
         
+        if(mcount == mmcount){
+          mlist = mlist + `${mmcount}. <@${guildMember.user.id}> `;
+        } else {
+          mlist = mlist + `${mmcount}. <@${guildMember.user.id}>, `;  
+        }   
         
       }  
       
@@ -168,7 +172,7 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
+      mlist = mlist + "\n\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
@@ -200,7 +204,7 @@ let args =  messageArray.slice(1);
         
       if(mcount > 0){
          mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>\n`
+         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>, `;
         
         
       }  
@@ -209,7 +213,7 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
+      mlist = mlist + "\n\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
@@ -240,8 +244,8 @@ let args =  messageArray.slice(1);
       let mcount = guildMember.roles.filter(r => r.name == "G3 6PM-12AM").size; 
         
       if(mcount > 0){
-         //mmcount = mmcount + 1;  
-         mlist = mlist + `<@${guildMember.user.id}>, `
+         mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `;
         
         
       }  
@@ -250,7 +254,7 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
+      mlist = mlist + "\n\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
@@ -282,7 +286,7 @@ let args =  messageArray.slice(1);
         
       if(mcount > 0){
          mmcount = mmcount + 1;  
-         mlist = mlist + `${mmcount}. <@${guildMember.user.id}>\n`
+         mlist = mlist + `<@${guildMember.user.id}>, `;
         
         
       }  
@@ -291,7 +295,7 @@ let args =  messageArray.slice(1);
       
       })
       
-      mlist = mlist + "\n**Please PM them if you need assistant in:**\n\n";
+      mlist = mlist + "\n\n**Please PM them if you need assistant in:**\n\n";
       mlist = mlist + ":pushpin:Guild Dojo Challenge\n:pushpin:Guild Quest";
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
