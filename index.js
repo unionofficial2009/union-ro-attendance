@@ -311,7 +311,7 @@ let args =  messageArray.slice(1);
     
      guildmembers.forEach(function(guildMember, guildMemberId) {
        
-     let mcount = guildMember.roles.filter(r => r.name == "RO - Member" && !r.name == "RO - Pending" && !r.name == "RO - Inactive").size;   
+     let mcount = guildMember.roles.filter(r => r.name == "RO - Member" && r.name != "RO - Pending" && r.name != "RO - Inactive").size;   
        
        if(mcount > 0){
          msched.push(guildMember.user.id);   
