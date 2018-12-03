@@ -307,7 +307,7 @@ let args =  messageArray.slice(1);
     
      let guildmembers = message.guild.members;
      let msched = [];
-     let mlist = "Weekly Assist Schedule";
+     let mlist = "**Weekly Assist Schedule**";
     
      guildmembers.forEach(function(guildMember, guildMemberId) {
        
@@ -329,7 +329,15 @@ let args =  messageArray.slice(1);
     
     var arrayLength = msched.length;
     
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < arrayLength; i++) {
+      
+        if(i==0)mlist = mlist + "\n\n**Monday**\n"
+        if(i==11)mlist = mlist + "\n\n**Tuesday**\n"
+        if(i==21)mlist = mlist + "\n\n**Wednesday**\n"
+        if(i==31)mlist = mlist + "\n\n**Thursday**\n"
+        if(i==41)mlist = mlist + "\n\n**Friday**\n"
+        if(i==51)mlist = mlist + "\n\n**Saturday**\n"
+        if(i==61)mlist = mlist + "\n\n**Sunday**\n"
         mlist = mlist + `<@${msched[i]}>, `;
     
     }
