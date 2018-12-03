@@ -168,6 +168,8 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
       mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
+      mlist = mlist + "\n📢 **Please check **ASSISTING RULES** here** :arrow_right: <#489809878261563403>";
+      mlist = mlist + "\n📢 **Please check **WEEKLY ASSISTING SCHEDULES** here** :arrow_right: <#518251051703468042>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -209,6 +211,8 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
       mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
+      mlist = mlist + "\n📢 **Please check **ASSISTING RULES** here** :arrow_right: <#489809878261563403>";
+      mlist = mlist + "\n📢 **Please check **WEEKLY ASSISTING SCHEDULES** here** :arrow_right: <#518251051703468042>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -250,6 +254,8 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
       mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
+      mlist = mlist + "\n📢 **Please check **ASSISTING RULES** here** :arrow_right: <#489809878261563403>";
+      mlist = mlist + "\n📢 **Please check **WEEKLY ASSISTING SCHEDULES** here** :arrow_right: <#518251051703468042>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -292,6 +298,8 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n:pushpin:Guild Dungeon - Vahalla Ruin\n:pushpin:Rift";
       mlist = mlist + "\n:pushpin:Endless Tower\n:pushpin:Training Ground";
       mlist = mlist + "\n\n📢 **Please select your playing time here** :arrow_right: <#517167677266198542>";
+      mlist = mlist + "\n📢 **Please check **ASSISTING RULES** here** :arrow_right: <#489809878261563403>";
+      mlist = mlist + "\n📢 **Please check **WEEKLY ASSISTING SCHEDULES** here** :arrow_right: <#518251051703468042>";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
