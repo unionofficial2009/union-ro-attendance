@@ -329,15 +329,15 @@ let args =  messageArray.slice(1);
     
     var arrayLength = msched.length;
     
-    for (var i = 0; i < arrayLength; i++) {
+    for (var i = 0; i < 70; i++) {
       
         if(i==0)mlist = mlist + "\n\n**Monday**\n"
-        if(i==11)mlist = mlist + "\n\n**Tuesday**\n"
-        if(i==21)mlist = mlist + "\n\n**Wednesday**\n"
-        if(i==31)mlist = mlist + "\n\n**Thursday**\n"
-        if(i==41)mlist = mlist + "\n\n**Friday**\n"
-        if(i==51)mlist = mlist + "\n\n**Saturday**\n"
-        if(i==61)mlist = mlist + "\n\n**Sunday**\n"
+        if(i==10)mlist = mlist + "\n\n**Tuesday**\n"
+        if(i==20)mlist = mlist + "\n\n**Wednesday**\n"
+        if(i==30)mlist = mlist + "\n\n**Thursday**\n"
+        if(i==40)mlist = mlist + "\n\n**Friday**\n"
+        if(i==50)mlist = mlist + "\n\n**Saturday**\n"
+        if(i==60)mlist = mlist + "\n\n**Sunday**\n"
         mlist = mlist + `<@${msched[i]}>, `;
     
     }
