@@ -271,6 +271,7 @@ let args =  messageArray.slice(1);
       let mmcount = 0;
       let mlist = "**Active Guild Members - 12AM to 6AM**\n\n";
       
+      
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
       let mcount = guildMember.roles.filter(r => r.name == "G4 12AM-6AM").size; 
@@ -302,7 +303,38 @@ let args =  messageArray.slice(1);
     
   }
   
-  
+  if(cmd === `${prefix}assist_sched`){
+    
+     let guildmembers = message.guild.members;
+     let msched = [];
+     let mlist = "Weekly Assist Schedule";
+    
+     guildmembers.forEach(function(guildMember, guildMemberId) {
+       
+     let mcount = guildMember.roles.filter(r => r.name == "RO - Member" && r.name != "RO - Pending" && r.name != "RO - Inactive").size;   
+       
+       if(mcount > 0){
+         msched.push(guildMember.user.id);   
+         
+       }  
+       
+       
+     }) 
+    
+    
+    msched.sort(function(a, b){return 0.5 - Math.random()});
+    
+    var arrayLength = msched.length;
+    
+    for (var i = 0; i < 10; i++) {
+        mlist = mlist + `<@${msched[i]}>, `;
+    
+    }
+    
+    
+     message.reply(`${mlist}`);
+     message.delete().catch(O_o=>{});
+  }  
   
   if(cmd === `${prefix}botinfo`){
    
