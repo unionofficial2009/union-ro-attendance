@@ -312,8 +312,8 @@ let args =  messageArray.slice(1);
      guildmembers.forEach(function(guildMember, guildMemberId) {
        
      let mcount = guildMember.roles.filter(r => r.name == "RO - Member");   
-     mcount = mcount.filter(r => r.name != "RO - Pending"); 
-     mcount = mcount.filter(r => r.name != "RO - Inactive").size;  
+     mcount = mcount.filter(r => r.id != 512908663476977664); 
+     mcount = mcount.filter(r => r.id != 515069461837905925).size;  
                
      //.filter(r => r.name != "RO - Pending").filter(r => r.name != "RO - Inactive").size  
        
