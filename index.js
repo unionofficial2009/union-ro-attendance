@@ -46,7 +46,7 @@ let args =  messageArray.slice(1);
      
   let attendanceEmbed = new Discord.RichEmbed()
   .setDescription(`${message.author}`)
-  .addField("Display Name", `${message.member.displayname}`)
+  .addField("Display Name", `${message.member.displayName}`)
   .addField("Username", `${message.author.username}`)
   .addField("Tag", `${message.author.tag}`)
   .addField("ID", `${message.author.id}`)
