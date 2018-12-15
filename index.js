@@ -39,6 +39,7 @@ let prefix = botconfig.prefix;
    let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
    let curHr = today.getHours();
    let greetings = "";
+   let myattendance = 0;
    
    if (curHr < 12) {
       greetings = 'Good Morning';
