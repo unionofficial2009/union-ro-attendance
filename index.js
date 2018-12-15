@@ -36,7 +36,7 @@ let args =  messageArray.slice(1);
    if(message.author.bot){
      
      message.delete().catch(O_o=>{});
-     message.reply(`hey pisot`);
+     message.reply(`hey ${message.member.displayName} pisot`);
      
    } else {
      let akmemberRole = message.guild.roles.find("name", "RO - Member");  
