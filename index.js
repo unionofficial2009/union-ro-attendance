@@ -60,11 +60,11 @@ let args =  messageArray.slice(1);
      
      let test = "";
      
-      messages.forEach(function(message,messageid) {
+      messages.forEach(function(messagecontent,messageid) {
         
-        test = test + `${message.embeds[0].fields[0].value}-${message.member.displayName}\n`;
+        test = test + `${messagecontent.embeds[0].fields[0].value}-${message.member.displayName}\n`;
         
-        if(message.embeds[0].fields[0].value == message.member.displayName){
+        if(messagecontent.embeds[0].fields[0].value == message.member.displayName){
           myattendance = myattendance + 1;
         }  
         
