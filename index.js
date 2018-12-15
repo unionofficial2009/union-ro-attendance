@@ -121,7 +121,7 @@ let prefix = botconfig.prefix;
          
          
        } else {
-       message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
+       message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);
          
       }  
        
