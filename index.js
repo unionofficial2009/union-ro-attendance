@@ -60,8 +60,8 @@ let prefix = botconfig.prefix;
       
     })
    
-   let server1 = bot.guilds.get("431118123664670720");
-   let attendancechannel = new discord.TextChannel(server1,{"id":"489803497164898304"});
+    let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+    if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
    
    
    attendancechannel.fetchMessages({ limit: 100 })
@@ -112,8 +112,8 @@ let prefix = botconfig.prefix;
      .setTimestamp()
      .setFooter("UNION RO Attendance",bicon2);
      
-      let server2 = bot.guilds.get("431118123664670720");
-      let attendancechannel = new discord.TextChannel(server2,{"id":"489803497164898304"});
+      let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
   
   
       
