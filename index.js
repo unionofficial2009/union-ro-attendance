@@ -34,11 +34,9 @@ let args =  messageArray.slice(1);
  if(cmd === `${prefix}present`){
    
    if(message.author.bot){
-      let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
-      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel."); 
      
      message.delete().catch(O_o=>{});
-     message.reply(`hey ${message.member.displayName} pisot`);
+     message.reply(`hey pisot`);
      
    } else {
      let akmemberRole = message.guild.roles.find("name", "RO - Member");  
