@@ -31,7 +31,7 @@ let prefix = botconfig.prefix;
   let cmd = messageArray[0];
   let args =  messageArray.slice(1);
   
- if(cmd === `${prefix}test`){
+ if(cmd === `${prefix}present`){
    
    
    
@@ -158,77 +158,77 @@ let prefix = botconfig.prefix;
    }).catch(console.error);
    
  }   
- if(cmd === `${prefix}present`){
-   
-   if(message.author.bot){
-     
-     
-     message.reply(`hey ${message.author.username} pisot`);
-     
-     let c_user = message.author   
-     let bicon = c_user.displayAvatarURL;   
-     let bicon2 = bot.user.displayAvatarURL; 
-     
-     let attendanceEmbed = new Discord.RichEmbed()
-     .setDescription(`${message.author}`)
-     .addField("Display Name", `${message.author.username}`)
-     .addField("Username", `${message.author.username}`)
-     .addField("Tag", `${message.author.tag}`)
-     .addField("ID", `${message.author.id}`)
-     .setColor("#15f153")
-     .setThumbnail(bicon)
-     .addField("Attendance", "Present")
-     .setTimestamp()
-     .setFooter("UNION RO Attendance",bicon2);
-     
-     let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
-     if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
-  
-  
-     message.delete().catch(O_o=>{});
-     attendancechannel.send(attendanceEmbed);
-     
-   } else {
-     let akmemberRole = message.guild.roles.find("name", "RO - Member");  
-      if(message.member.roles.has(akmemberRole.id)) {
-   if(cooldown.has(message.author.id)){
-     message.delete();
-      return message.reply("You have to wait 1 day.")
-    }
-  cooldown.add(message.author.id);
-     
-  let c_user = message.author   
-  let bicon = c_user.displayAvatarURL;   
-  let bicon2 = bot.user.displayAvatarURL;   
-     
-  let attendanceEmbed = new Discord.RichEmbed()
-  .setDescription(`${message.author}`)
-  .addField("Display Name", `${message.member.displayName}`)
-  .addField("Username", `${message.author.username}`)
-  .addField("Tag", `${message.author.tag}`)
-  .addField("ID", `${message.author.id}`)
-  .setColor("#15f153")
-  .setThumbnail(bicon)
-  .addField("Attendance", "Present")
-  .setTimestamp()
-  .setFooter("UNION RO Attendance",bicon2);
-  
-  let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
-  if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
-  
-  
-  message.delete().catch(O_o=>{});
-  attendancechannel.send(attendanceEmbed);
-      } else {
-     message.reply("You don't have the permission to use this command.");
-   }
-   setTimeout(() => {
-      cooldown.delete(message.author.id)
-      }, cdseconds * 1000)
-     
-   } 
-    
-  }
+//if(cmd === `${prefix}present`){
+//  
+//  if(message.author.bot){
+//    
+//    
+//    message.reply(`hey ${message.author.username} pisot`);
+//    
+//    let c_user = message.author   
+//    let bicon = c_user.displayAvatarURL;   
+//    let bicon2 = bot.user.displayAvatarURL; 
+//    
+//    let attendanceEmbed = new Discord.RichEmbed()
+//    .setDescription(`${message.author}`)
+//    .addField("Display Name", `${message.author.username}`)
+//    .addField("Username", `${message.author.username}`)
+//    .addField("Tag", `${message.author.tag}`)
+//    .addField("ID", `${message.author.id}`)
+//    .setColor("#15f153")
+//    .setThumbnail(bicon)
+//    .addField("Attendance", "Present")
+//    .setTimestamp()
+//    .setFooter("UNION RO Attendance",bicon2);
+//    
+//    let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+//    if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
+// 
+// 
+//    message.delete().catch(O_o=>{});
+//    attendancechannel.send(attendanceEmbed);
+//    
+//  } else {
+//    let akmemberRole = message.guild.roles.find("name", "RO - Member");  
+//     if(message.member.roles.has(akmemberRole.id)) {
+//  if(cooldown.has(message.author.id)){
+//    message.delete();
+//     return message.reply("You have to wait 1 day.")
+//   }
+// cooldown.add(message.author.id);
+//    
+// let c_user = message.author   
+// let bicon = c_user.displayAvatarURL;   
+// let bicon2 = bot.user.displayAvatarURL;   
+//    
+// let attendanceEmbed = new Discord.RichEmbed()
+// .setDescription(`${message.author}`)
+// .addField("Display Name", `${message.member.displayName}`)
+// .addField("Username", `${message.author.username}`)
+// .addField("Tag", `${message.author.tag}`)
+// .addField("ID", `${message.author.id}`)
+// .setColor("#15f153")
+// .setThumbnail(bicon)
+// .addField("Attendance", "Present")
+// .setTimestamp()
+// .setFooter("UNION RO Attendance",bicon2);
+// 
+// let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+// if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
+// 
+// 
+// message.delete().catch(O_o=>{});
+// attendancechannel.send(attendanceEmbed);
+//     } else {
+//    message.reply("You don't have the permission to use this command.");
+//  }
+//  setTimeout(() => {
+//     cooldown.delete(message.author.id)
+//     }, cdseconds * 1000)
+//    
+//  } 
+//   
+// }
   
   if(cmd === `${prefix}mcount`){
     let romemberRole = message.guild.roles.find("name", "RO - Member");
