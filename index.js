@@ -38,7 +38,6 @@ let args =  messageArray.slice(1);
       if (!attendancechannel) return message.channel.send("Couldn't find attendance channel."); 
      
      message.delete().catch(O_o=>{});
-     message.member.displayName
      message.reply(`hey ${message.member.displayName} pisot`);
      
    } else {
