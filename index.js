@@ -52,7 +52,7 @@ let args =  messageArray.slice(1);
    ignchannel.fetchMessages({ limit: 3 })
    .then(messages => {
       
-      message.reply(messages.map(m=> `${m.createdAt.getMonth()}`).join(", ")) 
+      message.reply(messages.map(m=> `${m.createdAt.getMonth()+1}-${m.createdAt.getDate}-${m.createdAt.getFullYear()}`).join(", ")) 
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
       message.delete().catch(O_o=>{});  
