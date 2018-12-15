@@ -347,7 +347,7 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n2. &et51to90 for Endless Tower floor 51-90"; 
       mlist = mlist + "\n3. &dojo for Guild Dojo Challenge"; 
       mlist = mlist + "\n4. &vr40 for Vahalla Ruins 40";  
-      mlist = mlist + "\n4. &vr60 for Vahalla Ruins 60";
+      mlist = mlist + "\n5. &vr60 for Vahalla Ruins 60";
        
       mlist = mlist + "\n\n<@&489776631913906199>";
       
@@ -390,7 +390,7 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n2. &et51to90 for Endless Tower floor 51-90"; 
       mlist = mlist + "\n3. &dojo for Guild Dojo Challenge"; 
       mlist = mlist + "\n4. &vr40 for Vahalla Ruins 40";  
-      mlist = mlist + "\n4. &vr60 for Vahalla Ruins 60";
+      mlist = mlist + "\n5. &vr60 for Vahalla Ruins 60";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -431,7 +431,7 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n2. &et51to90 for Endless Tower floor 51-90"; 
       mlist = mlist + "\n3. &dojo for Guild Dojo Challenge"; 
       mlist = mlist + "\n4. &vr40 for Vahalla Ruins 40";  
-      mlist = mlist + "\n4. &vr60 for Vahalla Ruins 60";
+      mlist = mlist + "\n5. &vr60 for Vahalla Ruins 60";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -472,7 +472,7 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n2. &et51to90 for Endless Tower floor 51-90"; 
       mlist = mlist + "\n3. &dojo for Guild Dojo Challenge"; 
       mlist = mlist + "\n4. &vr40 for Vahalla Ruins 40";  
-      mlist = mlist + "\n4. &vr60 for Vahalla Ruins 60";
+      mlist = mlist + "\n5. &vr60 for Vahalla Ruins 60";
        
       mlist = mlist + "\n\n<@&489776631913906199>";
       
@@ -514,7 +514,7 @@ let args =  messageArray.slice(1);
       mlist = mlist + "\n2. &et51to90 for Endless Tower floor 51-90"; 
       mlist = mlist + "\n3. &dojo for Guild Dojo Challenge"; 
       mlist = mlist + "\n4. &vr40 for Vahalla Ruins 40";  
-      mlist = mlist + "\n4. &vr60 for Vahalla Ruins 60";
+      mlist = mlist + "\n5. &vr60 for Vahalla Ruins 60";
        
       mlist = mlist + "\n\n<@&489776631913906199>";
       
