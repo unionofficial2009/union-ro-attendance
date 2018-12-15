@@ -50,7 +50,7 @@ let args =  messageArray.slice(1);
    
    //mmcount
    
-   ignchannel.fetchMessages({ limit: 100 })
+   ignchannel.fetchMessages({ limit: 5 })
    .then(messages => {
       
       //message.reply(`${messages.size} / ${mmcount}`);
@@ -59,6 +59,8 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
       messages.forEach(function(message,messageid) {
+        
+        message.reply(`${message.embeds[0].fields[0].value}-${message.member.displayName}`);
         
         if(message.embeds[0].fields[0].value == message.member.displayName){
           myattendance = myattendance + 1;
