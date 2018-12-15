@@ -60,8 +60,6 @@ let args =  messageArray.slice(1);
      
      let today = new Date();
      let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
-     
-      message.reply(`today:${newtoday}`);
     
      
       messages.forEach(function(messagecontent,messageid) {
