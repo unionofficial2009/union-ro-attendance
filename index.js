@@ -58,9 +58,11 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
+     let test = "";
+     
       messages.forEach(function(message,messageid) {
         
-        message.reply(`${message.embeds[0].fields[0].value}-${message.member.displayName}`);
+        test = test + `${message.embeds[0].fields[0].value}-${message.member.displayName}\n`;
         
         if(message.embeds[0].fields[0].value == message.member.displayName){
           myattendance = myattendance + 1;
@@ -68,7 +70,7 @@ let args =  messageArray.slice(1);
         
      })   
      
-     message.reply(`${myattendance}`);
+     message.reply(`${test}`);
      
     // if (myattendance > 0){
     //   return message.reply("You have to wait 1 day.")  
