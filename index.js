@@ -69,10 +69,20 @@ let prefix = botconfig.prefix;
 
         let userdate = `${messagecontent.createdAt.getMonth()+1}-${messagecontent.createdAt.getDate()}-${messagecontent.createdAt.getFullYear()}`;
         
+         if(message.author.bot){
+        
+         if(messagecontent.embeds[0].fields[0].value == message.author.username && newtoday == userdate){
+          myattendance = myattendance + 1;
+         }  
+           
+         } else {  
+        
         if(messagecontent.embeds[0].fields[0].value == message.member.displayName && newtoday == userdate){
           myattendance = myattendance + 1;
         }  
-        
+       
+        }   
+           
      })   
      
      
