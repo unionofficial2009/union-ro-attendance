@@ -32,12 +32,17 @@ let cmd = messageArray[0];
 let args =  messageArray.slice(1);
     
  if(cmd === `${prefix}present`){
-    let akmemberRole = message.guild.roles.find("name", "RO - Member");
-   if(message.member.roles.has(akmemberRole.id)) {
+   
+   if(message.author.bot){
+     
+     
+   } else {
+     let akmemberRole = message.guild.roles.find("name", "RO - Member");  
+      if(message.member.roles.has(akmemberRole.id)) {
    if(cooldown.has(message.author.id)){
-    message.delete();
-  return message.reply("You have to wait 1 day.")
-  }
+     message.delete();
+      return message.reply("You have to wait 1 day.")
+    }
   cooldown.add(message.author.id);
      
   let c_user = message.author   
@@ -68,7 +73,8 @@ let args =  messageArray.slice(1);
    setTimeout(() => {
       cooldown.delete(message.author.id)
       }, cdseconds * 1000)
-
+     
+   } 
     
   }
   
