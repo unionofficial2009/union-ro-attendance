@@ -61,6 +61,7 @@ let args =  messageArray.slice(1);
      let today = new Date();
      let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
      
+      message.reply(`today:${newtoday}`);
      //let test = "";
      
       messages.forEach(function(messagecontent,messageid) {
@@ -70,6 +71,7 @@ let args =  messageArray.slice(1);
         
         if(messagecontent.embeds[0].fields[0].value == message.member.displayName && newtoday == userdate){
           myattendance = myattendance + 1;
+          message.reply(`userdate:${userdate}`);
         }  
         
      })   
