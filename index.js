@@ -50,10 +50,10 @@ let args =  messageArray.slice(1);
    
    //mmcount
    
-   ignchannel.fetchMessages({ limit: mmcount })
+   ignchannel.fetchMessages({ limit: 5 })
    .then(messages => {
       
-      message.reply(`${messages.size}`);
+      message.reply(`${messages.size} / ${mmcount}`);
       //message.reply(messages.map(m=> `${m.createdAt.getMonth()+1}-${m.createdAt.getDate()}-${m.createdAt.getFullYear()}`).join(", ")) 
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
