@@ -60,8 +60,7 @@ let prefix = botconfig.prefix;
       
     })
    
-    let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
-    if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
+   
    
    
    ignchannel.fetchMessages({ limit: 100 })
@@ -112,8 +111,8 @@ let prefix = botconfig.prefix;
      .setTimestamp()
      .setFooter("UNION RO Attendance",bicon2);
      
-      let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
-      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
+      let server = bot.guilds.get("431118123664670720");
+      let attendancechannel = new discord.TextChannel(server,{"id":"489803497164898304"});
   
   
       message.delete().catch(O_o=>{});
@@ -121,7 +120,7 @@ let prefix = botconfig.prefix;
          
          
        } else{
-         
+         message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
          
       }  
        
