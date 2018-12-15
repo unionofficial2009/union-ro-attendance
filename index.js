@@ -114,14 +114,41 @@ let prefix = botconfig.prefix;
      
       let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
       if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
-  
-  
       
       attendancechannel.send(attendanceEmbed); 
-         
-         
+                  
        } else {
-       message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);
+         
+      let romemberRole = message.guild.roles.find("name", "RO - Member");  
+      if(message.member.roles.has(romemberRole.id)) {
+      
+      message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);  
+        
+     let c_user = message.author   
+     let bicon = c_user.displayAvatarURL;   
+     let bicon2 = bot.user.displayAvatarURL;   
+     
+     let attendanceEmbed = new Discord.RichEmbed()
+     .setDescription(`${message.author}`)
+     .addField("Display Name", `${message.member.displayName}`)
+     .addField("Username", `${message.author.username}`)
+     .addField("Tag", `${message.author.tag}`)
+     .addField("ID", `${message.author.id}`)
+     .setColor("#15f153")
+     .setThumbnail(bicon)
+     .addField("Attendance", "Present")
+     .setTimestamp()
+     .setFooter("UNION RO Attendance",bicon2);
+     
+     let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+     if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");   
+        
+     attendancechannel.send(attendanceEmbed);   
+        
+      } else {
+      message.reply("You don't have the permission to use this command.");
+          
+      }           
          
       }  
        
