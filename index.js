@@ -60,10 +60,11 @@ let prefix = botconfig.prefix;
       
     })
    
+   let server1 = bot.guilds.get("431118123664670720");
+   let attendancechannel = new discord.TextChannel(server1,{"id":"489803497164898304"});
    
    
-   
-   ignchannel.fetchMessages({ limit: 100 })
+   attendancechannel.fetchMessages({ limit: 100 })
    .then(messages => {
       
       //message.reply(`${messages.size} / ${mmcount}`);
@@ -111,8 +112,8 @@ let prefix = botconfig.prefix;
      .setTimestamp()
      .setFooter("UNION RO Attendance",bicon2);
      
-      let server = bot.guilds.get("431118123664670720");
-      let attendancechannel = new discord.TextChannel(server,{"id":"489803497164898304"});
+      let server2 = bot.guilds.get("431118123664670720");
+      let attendancechannel = new discord.TextChannel(server2,{"id":"489803497164898304"});
   
   
       
