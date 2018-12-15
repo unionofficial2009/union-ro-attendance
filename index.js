@@ -57,7 +57,7 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
-      messages.forEach(function(message) {
+      messages.forEach(function(message,messageid) {
         
         if(message.embeds[0].fields[0].value == message.member.displayName){
           myattendance = myattendance + 1;
