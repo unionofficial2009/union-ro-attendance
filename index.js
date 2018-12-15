@@ -50,7 +50,7 @@ let args =  messageArray.slice(1);
    
    //mmcount
    
-   ignchannel.fetchMessages({ limit: 100 })
+   ignchannel.fetchMessages({ limit: 101 })
    .then(messages => {
       
       message.reply(`${messages.size} / ${mmcount}`);
