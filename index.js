@@ -530,7 +530,7 @@ let args =  messageArray.slice(1);
   if(cmd === `${prefix}ptforming`){
 
      
-      let mlist = "**Party Forming\n\n**";
+      let mlist = "**Party Forming**";
 
      //if (message.channel.id == 521697035439833088) {
        
