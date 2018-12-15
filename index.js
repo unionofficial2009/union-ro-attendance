@@ -62,25 +62,27 @@ let args =  messageArray.slice(1);
      let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
      
       message.reply(`today:${newtoday}`);
-     //let test = "";
+    
      
       messages.forEach(function(messagecontent,messageid) {
         
-        //test = test + `${messagecontent.embeds[0].fields[0].value}-${message.member.displayName}\n`;
+
         let userdate = `${messagecontent.createdAt.getMonth()+1}-${messagecontent.createdAt.getDate()}-${messagecontent.createdAt.getFullYear()}`;
         
         if(messagecontent.embeds[0].fields[0].value == message.member.displayName && newtoday == userdate){
           myattendance = myattendance + 1;
-          message.reply(`userdate:${userdate}`);
         }  
         
      })   
      
-     message.reply(`${myattendance}`);
      
-    // if (myattendance > 0){
-    //   return message.reply("You have to wait 1 day.")  
-    // }  
+     
+     if (myattendance > 0){
+       return message.reply("You have to wait 1 day.")  
+     }  else {
+       return message.reply("pisot")
+       
+     }  
        
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
