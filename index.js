@@ -341,8 +341,8 @@ let args =  messageArray.slice(1);
       })
        
       mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
-      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.";
-      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands."; 
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
+      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands.**"; 
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -378,8 +378,8 @@ let args =  messageArray.slice(1);
       })
        
       mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
-      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.";
-      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands.";  
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
+      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands.**";  
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
