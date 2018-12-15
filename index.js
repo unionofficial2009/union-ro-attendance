@@ -58,13 +58,17 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
-     let test = "";
+     let today = new Date();
+     let newtoday = `${today.getMonth()+1}-${today.createdAt.getDate()}-${today.createdAt.getFullYear()}`;
+     
+     //let test = "";
      
       messages.forEach(function(messagecontent,messageid) {
         
-        test = test + `${messagecontent.embeds[0].fields[0].value}-${message.member.displayName}\n`;
+        //test = test + `${messagecontent.embeds[0].fields[0].value}-${message.member.displayName}\n`;
+        let userdate = `${messagecontent.createdAt.getMonth()+1}-${messagecontent.createdAt.getDate()}-${messagecontent.createdAt.getFullYear()}`;
         
-        if(messagecontent.embeds[0].fields[0].value == message.member.displayName){
+        if(messagecontent.embeds[0].fields[0].value == message.member.displayName && newtoday == userdate){
           myattendance = myattendance + 1;
         }  
         
