@@ -58,7 +58,7 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
-     let today = new Date();
+     let today = new Date('August 19, 1975 23:15:30 GMT+08:00');
      let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
      
       message.reply(`today:${newtoday}`);
