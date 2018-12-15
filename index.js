@@ -27,12 +27,26 @@ if(message.channel.type === "dm") return;
 let prefix = botconfig.prefix;
   
   if(!message.content.startsWith(prefix)) return;
-let messageArray = message.content.split(" ");
-let cmd = messageArray[0];
-let args =  messageArray.slice(1);
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args =  messageArray.slice(1);
   
  if(cmd === `${prefix}test`){
+   
    message.delete().catch(O_o=>{});  
+   
+   let today = new Date();
+   let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
+   let curHr = today.getHours();
+   let greetings = ""
+   
+   if (curHr < 12) {
+      greetings = 'Good Morning';
+   } else if (curHr < 18) {
+      greetings ='good Afternoon';
+   } else {
+      greetings ='Good Evening';
+   }
    
    let guildmembers = message.guild.members;
    let mmcount = 0;
@@ -49,7 +63,6 @@ let args =  messageArray.slice(1);
     let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
     if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
    
-   //mmcount
    
    ignchannel.fetchMessages({ limit: 100 })
    .then(messages => {
@@ -59,8 +72,7 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
-     let today = new Date();
-     let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
+     
     
      
       messages.forEach(function(messagecontent,messageid) {
@@ -79,7 +91,39 @@ let args =  messageArray.slice(1);
      if (myattendance > 0){
        return message.reply("You have to wait 1 day.")  
      }  else {
-       return message.reply("pisot")
+       if(message.author.bot){
+         
+         
+        message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
+     
+      let c_user = message.author   
+      let bicon = c_user.displayAvatarURL;   
+      let bicon2 = bot.user.displayAvatarURL; 
+     
+     let attendanceEmbed = new Discord.RichEmbed()
+     .setDescription(`${message.author}`)
+     .addField("Display Name", `${message.author.username}`)
+     .addField("Username", `${message.author.username}`)
+     .addField("Tag", `${message.author.tag}`)
+     .addField("ID", `${message.author.id}`)
+     .setColor("#15f153")
+     .setThumbnail(bicon)
+     .addField("Attendance", "Present")
+     .setTimestamp()
+     .setFooter("UNION RO Attendance",bicon2);
+     
+      let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
+      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
+  
+  
+      message.delete().catch(O_o=>{});
+      attendancechannel.send(attendanceEmbed); 
+         
+         
+       } else
+         
+         
+      }  
        
      }  
        
