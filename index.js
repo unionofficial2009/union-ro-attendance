@@ -38,7 +38,7 @@ let prefix = botconfig.prefix;
    let today = new Date();
    let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
    let curHr = today.getHours();
-   let greetings = ""
+   let greetings = "";
    
    if (curHr < 12) {
       greetings = 'Good Morning';
@@ -93,7 +93,7 @@ let prefix = botconfig.prefix;
        if(message.author.bot){
          
          
-        message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
+      message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
      
       let c_user = message.author   
       let bicon = c_user.displayAvatarURL;   
@@ -115,12 +115,12 @@ let prefix = botconfig.prefix;
       let attendancechannel = new discord.TextChannel(server,{"id":"489803497164898304"});
   
   
-      message.delete().catch(O_o=>{});
+      
       attendancechannel.send(attendanceEmbed); 
          
          
-       } else{
-         message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
+       } else {
+       message.reply(`${greetings} ${message.author.username}  :tada::hugging: !`);
          
       }  
        
