@@ -33,10 +33,10 @@ let args =  messageArray.slice(1);
     
  if(cmd === `${prefix}present`){
    
-   //if(message.author.bot){
+   if(message.author.bot){
+      message.reply(`test`); 
      
-     
-   //} else {
+   } else {
      let akmemberRole = message.guild.roles.find("name", "RO - Member");  
       if(message.member.roles.has(akmemberRole.id)) {
    if(cooldown.has(message.author.id)){
@@ -74,7 +74,7 @@ let args =  messageArray.slice(1);
       cooldown.delete(message.author.id)
       }, cdseconds * 1000)
      
-   //} 
+   } 
     
   }
   
