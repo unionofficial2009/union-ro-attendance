@@ -120,7 +120,7 @@ let prefix = botconfig.prefix;
       attendancechannel.send(attendanceEmbed); 
          
          
-       } else
+       } else{
          
          
       }  
