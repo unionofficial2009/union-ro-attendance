@@ -342,7 +342,7 @@ let args =  messageArray.slice(1);
        
       mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
       mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
-      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands.**"; 
+  
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -379,7 +379,115 @@ let args =  messageArray.slice(1);
        
       mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
       mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
-      mlist = mlist + "\n📢 **View Pinned Messages for party forming commands.**";  
+
+      mlist = mlist + "\n\n<@&489776631913906199>";
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+       
+     }  
+    
+  }
+  
+  if(cmd === `${prefix}dojo`){
+
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "**Guild Members looking for party - Guild Dojo Challenge\n\n";
+
+     if (message.channel.id == 521697035439833088) {
+
+       guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "Guild Dojo Challenge").size; 
+        
+      if(mcount > 0){
+         //mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `;
+        
+        
+       }  
+      
+         
+      
+      })
+       
+      mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
+
+      mlist = mlist + "\n\n<@&489776631913906199>";
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+       
+     }  
+    
+  }
+  
+  if(cmd === `${prefix}vr40`){
+
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "**Guild Members looking for party - Vahalla Ruins 40\n\n";
+
+     if (message.channel.id == 521697035439833088) {
+
+       guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "Vahalla Ruins 40").size; 
+        
+      if(mcount > 0){
+         //mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `;
+        
+        
+       }  
+      
+         
+      
+      })
+       
+      mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
+
+      mlist = mlist + "\n\n<@&489776631913906199>";
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+       
+     }  
+    
+  }
+  
+  if(cmd === `${prefix}vr60`){
+
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "**Guild Members looking for party - Vahalla Ruins 60\n\n";
+
+     if (message.channel.id == 521697035439833088) {
+
+       guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "Vahalla Ruins 60").size; 
+        
+      if(mcount > 0){
+         //mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `;
+        
+        
+       }  
+      
+         
+      
+      })
+       
+      mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.**";
+
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
