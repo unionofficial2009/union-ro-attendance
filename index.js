@@ -33,7 +33,7 @@ let prefix = botconfig.prefix;
   
  if(cmd === `${prefix}test`){
    
-   message.delete().catch(O_o=>{});  
+   
    
    let today = new Date();
    let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
@@ -126,7 +126,7 @@ let prefix = botconfig.prefix;
        
      }  
        
-      
+    message.delete().catch(O_o=>{});   
    }).catch(console.error);
    
  }   
