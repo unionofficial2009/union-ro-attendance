@@ -48,17 +48,6 @@ let prefix = botconfig.prefix;
       greetings ='Good Evening';
    }
    
-   let guildmembers = message.guild.members;
-   let mmcount = 0;
-   let myattendance = 0;
-   
-    guildmembers.forEach(function(guildMember, guildMemberId) {
-        
-      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size;  
-      
-      mmcount = mmcount + mcount;   
-      
-    })
    
     let attendancechannel = message.guild.channels.find(`name`, "ro-attendance");
     if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
