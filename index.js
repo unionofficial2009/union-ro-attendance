@@ -33,14 +33,28 @@ let args =  messageArray.slice(1);
   
  if(cmd === `${prefix}test`){
    
+   let guildmembers = message.guild.members;
+   let mmcount = 0;
+   
+    guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size;  
+      
+      mmcount = mmcount + mcount;   
+      
+    })
+   
     let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
     if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
+   
+   //mmcount
    
    ignchannel.fetchMessages({ limit: 3 })
    .then(messages => {
       
        
-      message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
+      message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
+      //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
    
