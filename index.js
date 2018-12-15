@@ -70,7 +70,7 @@ let args =  messageArray.slice(1);
         
      })   
      
-     message.reply(`${test}`);
+     message.reply(`${myattendance}`);
      
     // if (myattendance > 0){
     //   return message.reply("You have to wait 1 day.")  
