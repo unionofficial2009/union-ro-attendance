@@ -32,6 +32,7 @@ let cmd = messageArray[0];
 let args =  messageArray.slice(1);
   
  if(cmd === `${prefix}test`){
+   message.delete().catch(O_o=>{});  
    
    let guildmembers = message.guild.members;
    let mmcount = 0;
@@ -82,7 +83,7 @@ let args =  messageArray.slice(1);
        
      }  
        
-      message.delete().catch(O_o=>{});  
+      
    }).catch(console.error);
    
  }   
