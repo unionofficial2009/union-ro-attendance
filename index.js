@@ -40,7 +40,7 @@ let args =  messageArray.slice(1);
    .then(messages => {
       
        
-      message.reply(messages.map(m=> `${m.author.username}`).join(", "));
+      message.reply(messages.map(m=> `${m.content}`).join(", "));
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
    
