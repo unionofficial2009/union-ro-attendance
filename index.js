@@ -30,7 +30,21 @@ let prefix = botconfig.prefix;
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args =  messageArray.slice(1);
-    
+  
+ if(cmd === `${prefix}test`){
+   
+    let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
+    if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
+   
+   ignchannel.fetchMessages({ limit: 10 })
+   .then(messages => {
+      
+       
+      message.reply(messages.map(m=> `${m.author.username}`).join(", "));
+      message.delete().catch(O_o=>{});  
+   }).catch(console.error);
+   
+ }   
  if(cmd === `${prefix}present`){
    
    if(message.author.bot){
