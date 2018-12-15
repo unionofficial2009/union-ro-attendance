@@ -59,7 +59,7 @@ let args =  messageArray.slice(1);
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
      
      let today = new Date();
-     let newtoday = `${today.getMonth()+1}-${today.createdAt.getDate()}-${today.createdAt.getFullYear()}`;
+     let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
      
      //let test = "";
      
