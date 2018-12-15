@@ -35,6 +35,7 @@ let args =  messageArray.slice(1);
    
    let guildmembers = message.guild.members;
    let mmcount = 0;
+   let myattendance = 0;
    
     guildmembers.forEach(function(guildMember, guildMemberId) {
         
@@ -49,12 +50,25 @@ let args =  messageArray.slice(1);
    
    //mmcount
    
-   ignchannel.fetchMessages({ limit: 3 })
+   ignchannel.fetchMessages({ limit: mmcount })
    .then(messages => {
       
-      message.reply(messages.map(m=> `${m.createdAt.getMonth()+1}-${m.createdAt.getDate()}-${m.createdAt.getFullYear()}`).join(", ")) 
+      //message.reply(messages.map(m=> `${m.createdAt.getMonth()+1}-${m.createdAt.getDate()}-${m.createdAt.getFullYear()}`).join(", ")) 
       //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
+     
+      messages.forEach(function(message) {
+        
+        if(message.embeds[0].fields[0].value == message.member.displayName){
+          myattendance = myattendance + 1;
+        }  
+        
+     })   
+     
+     if (myattendance > 0){
+       return message.reply("You have to wait 1 day.")  
+     }  
+       
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
    
