@@ -52,8 +52,8 @@ let args =  messageArray.slice(1);
    ignchannel.fetchMessages({ limit: 3 })
    .then(messages => {
       
-       
-      message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
+      message.reply(messages.map(m=> `${m.createdAt}`).join(", ")) 
+      //message.reply(messages.map(m=> `${m.embeds[0].createdAt}`).join(", "));
       //message.reply(messages.map(m=> `${m.embeds[0].fields[0].value}`).join(", "));
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
