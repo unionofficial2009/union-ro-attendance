@@ -40,7 +40,7 @@ let args =  messageArray.slice(1);
    .then(messages => {
       
        
-      message.reply(messages.map(m=> `${m.embeds.description}`).join(", "));
+      message.reply(messages.map(m=> `${m.embeds.description[0]}`).join(", "));
       message.delete().catch(O_o=>{});  
    }).catch(console.error);
    
