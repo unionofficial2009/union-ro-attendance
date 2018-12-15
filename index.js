@@ -341,7 +341,7 @@ let args =  messageArray.slice(1);
       })
        
       mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
-      mlist = mlist + "\n\n📢 **Please remove party forming roles after you finished the party runs.";
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.";
       mlist = mlist + "\n\n<@&489776631913906199>";
       
       message.reply(`${mlist}`);
@@ -350,6 +350,42 @@ let args =  messageArray.slice(1);
      }  
     
   }  
+  
+  
+  if(cmd === `${prefix}et1to50`){
+
+      let guildmembers = message.guild.members;
+      
+      let mmcount = 0;
+      let mlist = "**Guild Members looking for party - Endless Tower floor 51-90\n\n";
+
+     if (message.channel.id == 521697035439833088) {
+
+       guildmembers.forEach(function(guildMember, guildMemberId) {
+        
+      let mcount = guildMember.roles.filter(r => r.name == "Endless Tower floor 51-90").size; 
+        
+      if(mcount > 0){
+         //mmcount = mmcount + 1;  
+         mlist = mlist + `<@${guildMember.user.id}>, `;
+        
+        
+       }  
+      
+         
+      
+      })
+       
+      mlist = mlist + "\n\n📢 **Please select party forming roles here** :arrow_right: <#523341123289088000>";
+      mlist = mlist + "\n📢 **Please remove party forming roles after you finished the party runs.";
+      mlist = mlist + "\n\n<@&489776631913906199>";
+      
+      message.reply(`${mlist}`);
+      message.delete().catch(O_o=>{});  
+       
+     }  
+    
+  }
   
   if(cmd === `${prefix}assist_sched`){
     
