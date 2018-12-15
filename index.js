@@ -36,7 +36,7 @@ let args =  messageArray.slice(1);
     let ignchannel = message.guild.channels.find(`name`, "ro-attendance");
     if (!ignchannel) return message.channel.send("Couldn't find attendance channel.");
    
-   ignchannel.fetchMessages({ limit: 10 })
+   ignchannel.fetchMessages({ limit: 3 })
    .then(messages => {
       
        
