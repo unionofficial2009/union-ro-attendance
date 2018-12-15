@@ -44,7 +44,7 @@ let prefix = botconfig.prefix;
    if (curHr < 12) {
       greetings = 'Good Morning';
    } else if (curHr < 18) {
-      greetings ='good Afternoon';
+      greetings ='Good Afternoon';
    } else {
       greetings ='Good Evening';
    }
