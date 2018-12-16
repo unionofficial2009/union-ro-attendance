@@ -33,7 +33,10 @@ let prefix = botconfig.prefix;
   
  if(cmd === `${prefix}present`){
    
-   if (message.channel.id != 489790732681347073) return message.reply("Invalid Channel! Please type **&present** here :arrow_right: <#489790732681347073>");
+   if (message.channel.id != 489790732681347073) {
+     message.delete().catch(O_o=>{});
+     return message.reply("Invalid Channel! Please type **&present** here :arrow_right: <#489790732681347073>");
+   }  
    
    let today = new Date();
    let newtoday = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
