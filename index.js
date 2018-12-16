@@ -497,7 +497,7 @@ let prefix = botconfig.prefix;
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Guild Members looking for party - Endless Tower floor 1-50\n\n**";
+      let mlist = "**Guild Members looking for party - Endless Tower floor 1-50**\n\n";
 
      if (message.channel.id == 521697035439833088) {
 
@@ -540,7 +540,7 @@ let prefix = botconfig.prefix;
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Guild Members looking for party - Endless Tower floor 51-90\n\n**";
+      let mlist = "**Guild Members looking for party - Endless Tower floor 51-90**\n\n";
 
      if (message.channel.id == 521697035439833088) {
 
@@ -581,7 +581,7 @@ let prefix = botconfig.prefix;
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Guild Members looking for party - Guild Dojo Challenge\n\n**";
+      let mlist = "**Guild Members looking for party - Guild Dojo Challenge**\n\n";
 
      if (message.channel.id == 521697035439833088) {
 
@@ -622,7 +622,7 @@ let prefix = botconfig.prefix;
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Guild Members looking for party - Vahalla Ruins 40\n\n**";
+      let mlist = "**Guild Members looking for party - Vahalla Ruins 40**\n\n";
 
      if (message.channel.id == 521697035439833088) {
 
@@ -664,7 +664,7 @@ let prefix = botconfig.prefix;
       let guildmembers = message.guild.members;
       
       let mmcount = 0;
-      let mlist = "**Guild Members looking for party - Vahalla Ruins 60\n\n**";
+      let mlist = "**Guild Members looking for party - Vahalla Ruins 60**\n\n";
 
      if (message.channel.id == 521697035439833088) {
 
