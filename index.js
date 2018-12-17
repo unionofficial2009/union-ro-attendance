@@ -271,13 +271,13 @@ let prefix = botconfig.prefix;
       
       guildmembers.forEach(function(guildMember, guildMemberId) {
         
-      let mcount = guildMember.roles.filter(r => r.name == "RO - Member").size;  
+      let mcount = guildMember.roles.filter(r => r.name == `${args}`).size;  
       
       mmcount = mmcount + mcount;   
       
       })
       
-      message.reply(`**${mmcount}** RO Members`);
+      message.reply(`**${mmcount}** ${args}`);
       message.delete().catch(O_o=>{});  
       
     } else {
