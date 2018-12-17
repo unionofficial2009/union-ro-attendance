@@ -95,14 +95,14 @@ let prefix = botconfig.prefix;
        
         if(message.author.bot){
           
-          message.reply("You have to wait 1 day.")  
+          message.reply("You already have attendance for today.")  
              
         } else {
           
          let romemberRole = message.guild.roles.find("name", "RO - Member"); 
        
         if(message.member.roles.has(romemberRole.id)) {
-           message.reply("You have to wait 1 day.")  
+           message.reply("You already have attendance for today.")  
         } else {
           message.reply("You don't have the permission to use this command."); 
         }
