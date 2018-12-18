@@ -33,7 +33,7 @@ let prefix = botconfig.prefix;
   
  if(cmd === `${prefix}present`){
    
-   if (message.channel.id != 489790732681347073 && msg.author.id != 421634731709562886) {
+   if (message.channel.id != 489790732681347073 && message.author.id != 421634731709562886) {
      message.delete().catch(O_o=>{});
      return message.reply("Invalid Channel! Please type **&present** here :arrow_right: <#489790732681347073>");
    }  
