@@ -12,7 +12,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
   
- if (message.channel.id == 510330472119926785) {
+ if (message.channel.id == 510330472119926785 && msg.author.id != "421634731709562886") {
    
    if (message.attachments.size == 0) {
       message.delete().catch(O_o=>{});
